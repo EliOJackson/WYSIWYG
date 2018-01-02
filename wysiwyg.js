@@ -54,6 +54,9 @@ let container = document.getElementById("container");
 
 for (let i = 0; i < famousPeople.length; i++ ) {
     container.innerHTML += 
-    `<h3>${famousPeople[i].name}</h3>`
+    `<h3>${famousPeople[i].name}</h3>
+    <img src =${famousPeople[i].image}>
+    <p>${famousPeople[i].bio}<p>
+    <footer>${famousPeople[i].lifespan.birth} - ${famousPeople[i].lifespan.death}</footer>`
     
 };
