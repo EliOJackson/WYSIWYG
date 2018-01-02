@@ -49,3 +49,11 @@ let famousPeople = [
       death: " ",
     }
 }]
+
+let container = document.getElementById("container");
+
+for (let i = 0; i < famousPeople.length; i++ ) {
+    container.innerHTML += 
+    `<h3>${famousPeople[i].name}</h3>`
+    
+};
