@@ -69,14 +69,22 @@ let inputField = document.getElementById("inputField");
 let famousCard = document.getElementsByClassName ("seinfeld")
 // console.log(famousCard);
 
-
+let borderedElement;
 // When you click on one of the person elements, a dotted border should appear around it.
 // When you click on one of the person elements, the text input should immediately gain focus so that you can start typing.
-for (let i = 0; i < famousCard.length; i++) {
+
+for (let i = 0; i < famousCard.length; i++) { 
     famousCard[i].addEventListener("click", function(e){
-        e.target.classList.add("border");
-        inputField.focus();
+        if (borderedElement !== undefined) {   // checks if bE has been defined
+            borderedElement.classList.remove('border'); // removes class if true
+        };
+            e.target.classList.add("border"); // adds border to target
+            borderedElement = e.target  // defines bE for the above conditionals
+            inputField.focus();
         // console.log("testing");
     })
 }
+
+
+// When there is a highlighted person element, and you begin typing in the input box, the person's biography should be immediately bound to what you are typing, letter by letter.
 
