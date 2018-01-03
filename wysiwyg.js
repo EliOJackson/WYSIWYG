@@ -52,6 +52,8 @@ let famousPeople = [
 
 let container = document.getElementById("container");
 
+// Create a DOM element for each of the objects inside the container. Style your person elements however you like.
+
 for (let i = 0; i < famousPeople.length; i++ ) {
     container.innerHTML += 
     `<div class="seinfeld">
@@ -63,13 +65,18 @@ for (let i = 0; i < famousPeople.length; i++ ) {
     
 };
 
+let inputField = document.getElementById("inputField");
 let famousCard = document.getElementsByClassName ("seinfeld")
 // console.log(famousCard);
 
+
+// When you click on one of the person elements, a dotted border should appear around it.
+// When you click on one of the person elements, the text input should immediately gain focus so that you can start typing.
 for (let i = 0; i < famousCard.length; i++) {
     famousCard[i].addEventListener("click", function(e){
         e.target.classList.add("border");
-        console.log("testing");
+        inputField.focus();
+        // console.log("testing");
     })
 }
 
