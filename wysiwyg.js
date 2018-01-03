@@ -16,7 +16,7 @@ let famousPeople = [
     {
     name: "Jerry Seinfeld",
     bio: " Jerome Allen 'Jerry' Seinfeld (/ˈsaɪnfɛld/; born April 29, 1954)[1] is an American stand-up comedian, actor, writer, producer, and director. He is widely known for playing himself in the sitcom Seinfeld, which he created and wrote with Larry David. Seinfeld was heavily involved in Bee Movie, in which he voiced its protagonist. In 2010, he premiered a reality series called The Marriage Ref. He directed Colin Quinn in the Broadway show Long Story Short at the Helen Hayes Theater and the John Drew Theater at Guild Hall of East Hampton, which ran until January 2011. He is the creator and host of the web series Comedians in Cars Getting Coffee.",
-    image: "https://en.wikipedia.org/wiki/File:Jerry_Seinfeld_2011_Shankbone.JPG",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Jerry_Seinfeld_2011_Shankbone.JPG/220px-Jerry_Seinfeld_2011_Shankbone.JPG",
     lifespan: {
       birth: "1954",
       death: "",
@@ -54,9 +54,12 @@ let container = document.getElementById("container");
 
 for (let i = 0; i < famousPeople.length; i++ ) {
     container.innerHTML += 
-    `<h3>${famousPeople[i].name}</h3>
+    `<div class="seinfeld">
+    <h3>${famousPeople[i].name}</h3>
     <img src =${famousPeople[i].image}>
     <p>${famousPeople[i].bio}<p>
-    <footer>${famousPeople[i].lifespan.birth} - ${famousPeople[i].lifespan.death}</footer>`
+    <footer>${famousPeople[i].lifespan.birth} - ${famousPeople[i].lifespan.death}</footer>
+    </div>`
     
 };
+

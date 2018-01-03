@@ -1,0 +1,6 @@
+.seinfeld:nth-child(even) {
+    background-color: lightyellow;
+}
+.seinfeld:nth-child(odd) {
+    background-color: lightblue;
+}
