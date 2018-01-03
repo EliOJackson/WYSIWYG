@@ -88,3 +88,9 @@ for (let i = 0; i < famousCard.length; i++) {
 
 // When there is a highlighted person element, and you begin typing in the input box, the person's biography should be immediately bound to what you are typing, letter by letter.
 
+inputField.addEventListener("keypress", function (e) {
+    let key = e.keyCode;
+    if (key === 13) {
+        inputField.value = "";
+    }
+});
