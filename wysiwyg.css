@@ -4,3 +4,7 @@
 .seinfeld:nth-child(odd) {
     background-color: lightblue;
 }
+
+.border {
+    border: dotted 2px;
+}
